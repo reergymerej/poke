@@ -11,12 +11,12 @@ function check() {
     fetch(url).then(
         resp => {
             const {status} = resp;
+		console.log(`status: ${status}`);
             if (!isDesiredStatus(status)) {
                 setTimeout(() => {
                     check();
                 }, intervalMS);
             } else {
-		console.log(`status: ${status}`);
                 console.log(`[${new Date()}] it's ready`);
             }
         }
