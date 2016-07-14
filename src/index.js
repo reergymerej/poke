@@ -16,6 +16,7 @@ function check() {
                     check();
                 }, intervalMS);
             } else {
+		console.log(`status: ${status}`);
                 console.log(`[${new Date()}] it's ready`);
             }
         }
